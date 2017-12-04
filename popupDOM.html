@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  	<head>
+  		<title>La caverne du DOM</title>
+  		<meta charset="utf-8" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  		<link rel="stylesheet" href="assets/css/domCss.css" />
+  		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  	</head>
+  	<body>
+      <p>Ma page DOM </p>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <nav id="myNav">
+        <p>Un peu de texte <a>et un lien </a ></p>
+    </nav >
+
+      <div id="menu">
+
+ <div class ="item">
+ <span >Êlément 1 de la classe item</span></br>
+ <span >Êlément 2 de la classe item</span></br>
+ <span >Êlément 3 de la classe item</span></br>
+ <span >Êlément 4 de la classe item</span></br>
+ <span >Êlément 5 de la classe item</span></br>
+ <span >Êlément 6 de la classe item</span>
+ </div >
+ <p>-----------------------------------------------<p>
+ <div class ="publicite">
+ <span >Êlément 1 de la classe publicité</span></br>
+ <span >Êlément 2 de la classe publicité</span>
+ </div >
+
+ </div >
+<p>-----------------------------------------------<p>
+ <div id="contenu">
+ <span > Apparait ici et maintenant tout le contenu de la page web </br> Alors que seuls les éléments sélectionnés apparaissent dans les alert</span >
+ </div >
+
+      <script>
+      var nav = document.getElementById('myNav');
+      alert ("ici on accède à l'élément nav du body" + nav);
+    var query = document.querySelector('#menu .item span '),
+    queryAll = document.querySelectorAll('#menu .item span ');
+
+     alert (query.innerHTML); // Affiche : "Êlément 1"
+
+     alert ("Nombre d'éléments de la classe item : " + queryAll.length); // Affiche : "6"
+     alert (queryAll[0].innerHTML + ' - ' + queryAll[1].innerHTML);
+     // Affiche : "Êlément 1 - Êlément 2"
+     var i,c;
+     c=parseInt(queryAll.length);
+     alert("Affichage de tous les éléments de la classe item");
+     //affichage de tous les éléments de la classe item
+          for (i = 0; i < c; i++) {
+            alert(queryAll[i].innerHTML);
+          }
+
+      </script>
+    </body>
+</html>

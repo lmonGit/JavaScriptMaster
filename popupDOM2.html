@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>Question héritage</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="assets/css/domCss.css" />
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+
+  <a id="myLink" href="http://www.lemonde.fr/">Un lien modifi é dynamiquement </a>
+
+  <script>
+    //méthode via l'objet Element
+    //var link = document.getElementById('myLink');
+    //var href = link.getAttribute('href');
+
+    //avec des attributs accessibles on peut faire
+    var link = document.getElementById('myLink');
+    var href = link.href;
+    // On récupère l'attribut
+   alert(href);
+   //méthode via l'objet Element
+   //link.setAttribute('href','http://www.lefigaro.fr/');
+   //On a édité l'attribut href
+
+   //avec des attributs accessibles
+   link.href = 'http://www.lefigaro.fr/';
+  </script>
+
+</body>
+
+</html>

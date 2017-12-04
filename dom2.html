@@ -1,0 +1,29 @@
+<span style="font-size:24px;"><!<span style="font-size:18px;">DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>innerText et textContent html dom</title>
+<script>
+
+function test1(){
+
+    window.alert(document.getElementById("value").value);
+}
+function test2(){
+
+    window.alert(document.getElementById("innerHTML").innerHTML);
+}
+function test3(){
+
+    window.alert(document.getElementById("innerText").innerText);
+}
+</script>
+</head>
+<body id="innerHTML">
+Je suis le body：<span id="innerText">Je ne suis que du texte</span><br/>
+<input type="text" id="value" /><br/>
+<input type="button" onclick="test1()" value="value" /><br/>
+<input type="button" onclick="test2()" value="innerHTML"/><br/>
+<input type="button" onclick="test3()" value="innerText"/><br/>
+</body>
+</html></span></span>

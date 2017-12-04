@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>innerHTML</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="assets/css/domCss.css" />
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+
+  <div id="myDiv">
+    <p>Un peu de texte <a>et un lien </a ></p>
+</div >
+
+ <script >
+ var div = document . getElementById ('myDiv');
+ var txt = '';
+ alert ("Résultat d'un innerHTML " + div.innerHTML);
+ alert ("Résultat d'un innerText \n" + div.innerText);
+ alert ("Test des navigateurs pour l'emploi de innerText ou textContent" );
+ txt = div.textContent || div.innerText || '';
+ /*équivault à :
+ if (div. textContent ) { //  textContent  existe ? Alors
+on s'en sert !
+ txt = div. textContent ;
+ } else if( div. innerText ) { //  innerText  existe ?
+Alors on doit être sous IE.
+ txt = div. innerText + ' [via Internet Explorer ]';
+} else { // Si aucun des deux n'existe , cela est sû rement
+dû au fait qu 'il n'y a pas de texte
+ txt = ''; // On met une cha îne de caract ères vide
+ }*/
+alert ("Résultat du test navigateur : \n" + txt);
+
+ </script >
+</body >
+
+</html>
